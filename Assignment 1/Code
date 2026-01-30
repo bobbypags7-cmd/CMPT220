@@ -15,7 +15,7 @@ public class App {
     int sum = num1 + num2;
     System.out.println("The sum of " + num1 + " and " + num2 + " is " + sum + ".");
 
-    // I learned that defining variables in Java has a lot more to it than Python.
+    // I learned that defining variables and getting input in Java has a lot more to it than Python.
     // I also learned the difference between "String" and "int" data types.
 }
 }
