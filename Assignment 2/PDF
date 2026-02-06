@@ -1,0 +1,59 @@
+// For Ai policy
+// Whatever variable is used for score will start at 0
+// The quiz game will ask multiple choice questions to the user
+// The user will be promted to give an answer
+// The user's answer will be checked for correctness, and will award 1 point if correct
+// If wrong (else), no points will be given
+// When the user finishes the quiz, their score will be displayed
+
+// Bobby Pagliaro | Major: Cybersecurity 
+import java.util.Scanner;
+public class App {
+    public static void main(String[] args) throws Exception {
+        Scanner sc = new Scanner(System.in);
+        
+        int score = 0; // Score starts at 0
+        System.out.println("Welcome to the Quiz show!");
+        System.out.println("Please only input numbers for your answer :)"); // Makes it easier with case sensitivity and all that
+        System.out.println("Question 1: What is the name of the main character in Persona 5?");
+        System.out.println("1. Joker");
+        System.out.println("2. Fox");
+        System.out.println("3. Skull");
+        System.out.println("4. Crow");
+        int answer1 = sc.nextInt();
+        if (answer1 == 1){ 
+            System.out.println("Correct! +1"); // Award one point if correct
+            score += 1; // += adds 1 to the variable, basically "score = score + 1"
+        } else {
+            System.out.println("Incorrect."); // No points awarded if wrong
+        }
+        System.out.println("Question 2: What is the name of the first persona obtained in Persona 4?");
+        System.out.println("1. Orpheus");
+        System.out.println("2. Arsene");
+        System.out.println("3. Izanagi");
+        System.out.println("4. Jack Frost");
+        int answer2 = sc.nextInt(); // new variable
+        if (answer2 == 3){ 
+            System.out.println("Correct! +1"); // Same "grading" as before
+            score += 1;
+        } else {
+            System.out.println("Incorrect.");
+        }
+        System.out.println("Question 3: What is the extra hour of the day called in Persona 3?");
+        System.out.println("1. The Light Hour");
+        System.out.println("2. The Fake Hour");
+        System.out.println("3. The Real Hour");
+        System.out.println("4. The Dark Hour");
+        int answer3 = sc.nextInt();
+        if (answer3 == 4){ 
+            System.out.println("Correct! +1");
+            score += 1;
+        } else {
+            System.out.println("Incorrect.");
+        }
+        System.out.println("Your final score is: " + score);
+        System.out.println("Thanks for playing!");
+        // I learned that using int variables is easier than strings when comparing correctness.
+        // I initially tried to use strings, but the case sensitivity made it more complicated.
+    }
+}
