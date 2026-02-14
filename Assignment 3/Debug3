@@ -1,0 +1,62 @@
+import java.util.Scanner; // For 2 and 3
+public class Debug3 {
+    public static void main(String[] args) {
+
+
+        //P1: This one only prints 0-9, can you fix it so it prints 1-10?
+        System.out.println("Problem 1");
+        for (int i = 1; i <= 10; i++){ // Changed int "i = 0" to "i = 1" and "i = 10" to "i <= 10"
+            System.out.println(i);
+        }
+
+        //P2: Ask the user for a number. Create a loop to find the factorial of it
+        //(factorial = X!, X being the user input, Factorials are every digit before X multiplied together)
+        System.out.println("Problem 2");
+        System.out.println("Enter a number and I will tell you the factorial: ");
+        
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        int sum = 1; // Starts at one so it doesn't multiply by 0
+        for (int i = 0; i < num; i++) {
+            sum *= (i + 1); // "i + 1" ensures it doesn't start by multiplying by 0
+        }
+        System.out.println("The factorial of " + num + " is: " + sum);
+        //here's a hint
+        // for (int i = 0; i < ?; i++)
+
+        //P3: Ask the user for a number, and then add together every OTHER digit (starting from 1)
+        System.out.println("Problem 3");
+        System.out.println("Enter a number and I will tell you the sum of every other number: ");
+        
+        int num2 = sc.nextInt();
+        int sum2 = 0;
+        for (int i = 1; i <= num2; i += 2) { // Start at 1 and increment by 2 to get every other number
+            sum2 += i;
+        }
+        System.out.println("The sum of every other number up to " + num2 + " is: " + sum2);
+
+        //No hint! what do you need to complete this task?
+
+
+        //P4: Why does this loop never stop!
+        //what can you do to break out of the loop after it prints once?
+        System.out.println("Problem 4");
+        boolean run = true;
+        while (run == true){
+            System.out.println("I printed once!");
+            run = false; // This will stop the loop after one iteration
+        }
+
+        //P5: Take a string from the user and print them the reverse!
+        System.out.println("Problem 5");
+        System.out.println("Enter a string and I will reverse it: ");
+        
+        sc.nextLine(); // Code wasn't asking for input when I ran it, the problem was apparently being cause by using nextLine after nextInt, this line solved the problem by removing the leftover nextLine
+        String input = sc.nextLine();
+        String reverse = "";
+        for (int i = input.length() - 1; i >= 0; i--) { // Start from the end of the string and move backwards
+            reverse += input.charAt(i); // Add each character to the reverse string
+        }
+        System.out.println("The reverse of the string is: " + reverse);
+    }
+}
