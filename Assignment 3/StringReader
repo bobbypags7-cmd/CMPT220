@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class StringReader {
+// Renamed the file "StringReader" because it kept running something else when i tried to run it. Both were named "App".
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a string: ");
+        
+        String input = sc.nextLine();   // Takes input
+        for (int i = 0; i < input.length(); i++) { // .length() is used to read the length of the inputted string. The loop will run for how ever many characters there are.
+            System.out.println(input.charAt(i)); // .charAt() reads the character at the specified i. For example if i is 0, it will read the first character.
+        }   
+    }
+}
+
+/*
+The first thing I did was looking up how to read the length of the string so the for loop would know how long it had to run for, which led me to .lenght().
+Next I looked up how to read each character in the string in order to print it out, which was .charAt(i).
+
+In simple terms, the code first asks the user for a word or sentence.
+It then puts the input into a variable that can be read by the program.
+The program then reads how long the input is. 
+It finally prints each character on a new line by going through the string chartacter by character.
+
+I also learned that you can use an asterisk and forward slash to write comments, rather than two forward slashes.
+I learned this from the directions of this assignment.
+This helps to write multi-line comments more easily, like the post-assignment write-ups.
+*/
