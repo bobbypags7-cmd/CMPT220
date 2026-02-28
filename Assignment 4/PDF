@@ -1,0 +1,49 @@
+/*
+Idk if i need to do the Ai policy thing because the instructions have the ai policy for the quiz game but better safe then sorry 
+The program first establishes the array that will be used.
+It then loops through each element in the array to find duplicates.
+It then will check to see if the current element has already been reported to prevent duplicate reporting of duplicates.
+After that, it will check the elements that come before the current element to see if there are duplicates.
+It will do the same for the elements that come after it.
+If a duplicate is found, it will be reported and stop checking for duplicates.
+It then prints out all the duplicates found once.
+*/
+public class Main {
+    public static void main(String[] args) {
+        //Don't let the size of this scare you! no matter how big an array is, it all works the same!
+        int[] myArray = {10,3,295,38,20,3,4,267,2445,10,5566,87,93,17,10,2,87,267,3176,3,82};
+        //you cannot use the array util. Do this one by hand :(
+
+        for (int i = 0; i < myArray.length; i++) { // Loops through each element
+
+            boolean alreadyReported = false; // Checks if the element has been reported before
+
+            for (int k = 0; k < i; k++) { // Checks all previous elements
+                if (myArray[i] == myArray[k]) { // Compares current element with previous elements
+                    alreadyReported = true; // Already printed this number
+                    break; // Stop checking previous elements
+                }
+            }
+
+            if (!alreadyReported) { // Only continue if this number hasn't been reported yet
+
+                boolean isDuplicate = false;
+
+                for (int j = i + 1; j < myArray.length; j++) { // Check all elements after the current one
+                    if (myArray[i] == myArray[j]) { // Compares element with next elements
+                        isDuplicate = true; // Found a duplicate
+                        break; // Stop checking next elements
+                    }
+                }
+                
+                if (isDuplicate) { // Print the duplicate number
+                    System.out.println("Duplicate Number: " + myArray[i]);
+                }
+            }
+        }
+    }
+}
+/* 
+In this assignment, I learned how loops can be used with arrays to find out more about the arrays.
+I also learned that splitting the array into smaller parts (previous and next elements) can help in identifying duplicates more efficiently.
+*/
