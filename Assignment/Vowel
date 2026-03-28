@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class Vowel {
+    public static void main(String[] args) throws Exception {
+
+        System.out.println("Enter a string: ");
+        
+        Scanner sc = new Scanner(System.in);
+        String input = sc.nextLine();
+        
+        System.out.println("There are " + vowelCount(input) + " vowels in your string");
+    }
+    public static int vowelCount(String input) {
+        int count = 0; // Initialize count as 0
+        
+        for (int i = 0; i < input.length(); i++) {
+            char c = input.charAt(i);    // Get the current character, took from my midterm project
+            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U') { // Probably a better way to do this but idk
+                count++; // Increment the count if the character is a vowel
+            }
+        }
+        return count;
+    }
+}
