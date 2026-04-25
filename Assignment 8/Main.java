@@ -42,6 +42,7 @@ public class Main {
         System.out.println("Max value in stack: " + max);
         System.out.println("Min value in stack: " + min);
         System.out.println("Number of elements in stack: " + stax.size());
+        System.out.println(" ");
 
         LinkedList<Integer> linky = new LinkedList<>();
 
@@ -53,6 +54,7 @@ public class Main {
 
         int middleValue = linky.get(linky.size() / 2); // Get the middle value by getting the element at index size/2
         System.out.println("Middle value in linked list: " + middleValue);
+        System.out.println(" "); 
 
         Stack<Integer> driveDistance = new Stack<>();
 
